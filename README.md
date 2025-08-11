@@ -27,198 +27,18 @@ Initialization – Chaotic sequences generate diverse initial cluster centers.
 
 Prey Hunting Phase (Exploration) – Levy Flight updates cluster centers:
 
-c
-j
-(
-t
-+
-1
-)
-=
-c
-j
-(
-t
-)
-+
-Δ
-x
-⋅
-(
-T
-P
-−
-l
-⋅
-X
-b
-e
-s
-t
-)
-c 
-j
-(t+1)
-​
- =c 
-j
-(t)
-​
- +Δx⋅(TP−l⋅X 
-best
-​
- )
 Fighting Phase (Exploitation) – Chaotic refinement:
 
-c
-j
-(
-t
-+
-1
-)
-=
-c
-j
-(
-t
-)
-+
-r
-t
-⋅
-U
-B
-−
-c
-j
-(
-t
-)
-t
-+
-1
-c 
-j
-(t+1)
-​
- =c 
-j
-(t)
-​
- +r 
-t
-​
- ⋅ 
-t+1
-UB−c 
-j
-(t)
-​
- 
-​
- 
 Fitness Evaluation – Minimizes Within-Cluster Variance (WCS) and maximizes Silhouette Score.
 
 📌 Flowchart of CLFSTO:
-https://via.placeholder.com/600x400?text=CLFSTO+Algorithm+Flowchart (Replace with actual diagram)
+https://via.placeholder.com/600x400?text=CLFSTO+Algorithm+Flowchart 
 
 📈 Performance Metrics
 Metric	Formula	Goal
 Within-Cluster Variance (WCS)	
-∑
-j
-=
-1
-K
-∑
-x
-i
-∈
-C
-j
-∥
-x
-i
-−
-C
-j
-∥
-2
-∑ 
-j=1
-K
-​
- ∑ 
-x 
-i
-​
- ∈C 
-j
-​
- 
-​
- ∥x 
-i
-​
- −C 
-j
-​
- ∥ 
-2
- 	Minimize (Compact clusters)
+  Minimize (Compact clusters)
 Silhouette Score	
-s
-(
-x
-i
-)
-=
-b
-(
-x
-i
-)
-−
-a
-(
-x
-i
-)
-max
-⁡
-(
-a
-(
-x
-i
-)
-,
-b
-(
-x
-i
-)
-)
-s(x 
-i
-​
- )= 
-max(a(x 
-i
-​
- ),b(x 
-i
-​
- ))
-b(x 
-i
-​
- )−a(x 
-i
-​
- )
-​
  	Maximize (Better separation)
 📂 Repository Structure
 text
@@ -234,7 +54,7 @@ text
 Clone the repository:
 
 bash
-git clone https://github.com/yourusername/CLFSTO-Clustering.git
+git clone https://github.com/Alamin-Advance/CLFSTO-Clustering.git
 cd CLFSTO-Clustering
 Install dependencies:
 
