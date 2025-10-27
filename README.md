@@ -30,7 +30,7 @@ The algorithm’s efficiency is validated using multiple performance metrics and
 | `plots/` | Includes all final figures used in the publication (Box plots, Convergence curves) |
 
 
-## 🧩 Algorithm Overview
+## Algorithm Overview
 
 ### CLFSTO Enhancements:
 1. **Chaotic Initialization:** Improves diversity of initial population.
@@ -44,7 +44,7 @@ Initialize population → Apply chaotic mapping → Evaluate fitness
 → Iterate until convergence → Output optimal cluster centers
 ```
 
-## 📊 Experimental Setup
+## Experimental Setup
 
 | Parameter | Value |
 |------------|--------|
@@ -52,7 +52,6 @@ Initialize population → Apply chaotic mapping → Evaluate fitness
 | Maximum Iterations | 1000*number_of_variables |
 | Datasets | Liver, Cancer, Wine, Iris, Glass, Balance, Diabetes, Seeds, Ecoli, Heart |
 | Comparison Algorithms | STO, CSTO, SSTO, PSO, GA, GWO, WOA, K-Means |
-| Evaluation Metrics | Accuracy, Fitness, Convergence, Execution Time |
 
 
 ## 🔍 Citation
@@ -74,9 +73,9 @@ If you use this code in your research, please cite the following paper:
 ## 📬 Contact
 For questions or collaborations, please contact:  
 📧 alaminh1411@gmail.com  
-🌐 [/ORCID:https://orcid.org/my-orcid?orcid=0000-0003-3382-5300]
+🌐 [ORCID:https://orcid.org/my-orcid?orcid=0000-0003-3382-5300]
 
 
-## 📜 License
+## License
 This project is distributed under the **MIT License**.  
 See the [LICENSE](LICENSE) file for more details.
