@@ -1,86 +1,103 @@
-# Chaotic-Levy-Flight-Siberian-Tiger-Optimization-CLFSTO-for-Data-Clustering
-📌 Overview
-This repository presents CLFSTO—an enhanced Siberian Tiger Optimization (STO) algorithm integrated with chaotic logistic maps and Levy Flight (LF) for efficient data clustering. The proposed method improves exploration and exploitation, overcoming premature convergence and local optima issues in traditional clustering algorithms like K-means, PSO, and GWO.
+# Chaotic Levy-Flight-Driven Siberian Tiger Optimization for Enhanced Data Clustering
 
-🔹 Key Features:
-✅ Chaotic Logistic Maps – Enhances population diversity and dynamic parameter control.
-✅ Levy Flight (LF) – Improves global search capabilities, avoiding stagnation.
-✅ Superior Clustering Performance – Outperforms K-means, GA, GWO, WOA, PSO, and STO on 10 benchmark datasets.
-✅ Fitness Metrics – Evaluated using Silhouette Score and Within-Cluster Variance (WCS).
+This repository contains the implementation of the algorithm proposed in the paper:
 
-📊 Benchmark Datasets
-Dataset	Samples	Features	Clusters
-Iris	150	4	3
-Wine	178	13	3
-Glass	214	9	6
-Balance	625	4	3
-Diabetes	768	8	2
-Heart	303	13	2
-Cancer	569	30	2
-Ecoli	336	7	8
-Seeds	210	7	3
-Liver	345	6	2
-(All datasets sourced from UCI Machine Learning Repository and scikit-learn.)
+> **Chaotic Levy-Flight-Driven Siberian Tiger Optimization for Enhanced Data Clustering**  
+> *[Your Full Name]*  
+> Accepted in **Cybernetics & Systems (Taylor & Francis, 2025)**
 
-⚙️ Algorithm Workflow
-Initialization – Chaotic sequences generate diverse initial cluster centers.
+---
 
-Prey Hunting Phase (Exploration) – Levy Flight updates cluster centers:
+## 📘 Abstract
+This study introduces a novel **Chaotic Levy-Flight-Driven Siberian Tiger Optimization (CLFSTO)** algorithm for improved data clustering performance.  
+By integrating **chaotic initialization** and **Levy flight perturbation** strategies into the original **Siberian Tiger Optimization (STO)**, the proposed CLFSTO achieves superior exploration–exploitation balance, faster convergence, and enhanced clustering accuracy across various benchmark datasets.
 
-Fighting Phase (Exploitation) – Chaotic refinement:
+The algorithm’s efficiency is validated using multiple performance metrics and comparative experiments against well-known optimization algorithms such as PSO, GA, GWO, WOA, and K-Means.
 
-Fitness Evaluation – Minimizes Within-Cluster Variance (WCS) and maximizes Silhouette Score.
+---
 
-📌 Flowchart of CLFSTO:
-https://via.placeholder.com/600x400?text=CLFSTO+Algorithm+Flowchart 
+## ⚙️ Implementation Details
 
-📈 Performance Metrics
-Metric	Formula	Goal
-Within-Cluster Variance (WCS)	
-  Minimize (Compact clusters)
-Silhouette Score	
- 	Maximize (Better separation)
-📂 Repository Structure
-text
-├── /data/            # Benchmark datasets (CSV format)  
-├── /src/              
-│   ├── CLFSTO.py     # Main algorithm implementation  
-│   ├── utils.py      # Helper functions (fitness, Levy Flight, etc.)  
-├── /results/         # Clustering outputs & performance logs  
-├── /figures/         # Convergence plots, Silhouette analysis  
-├── requirements.txt  # Python dependencies  
-└── README.md  
-🛠️ Installation & Usage
-Clone the repository:
+### Programming Environment
+- **Language:** Python 3.10+
+- **Libraries:** `numpy`, `pandas`, `matplotlib`, `scikit-learn`
+- **Execution Platform:** Google Colab / Jupyter Notebook
 
-bash
-git clone https://github.com/Alamin-Advance/CLFSTO-Clustering.git
-cd CLFSTO-Clustering
-Install dependencies:
+### Key Components
+| Component | Description |
+|------------|-------------|
+| `clfsto.py` | Main implementation of the CLFSTO algorithm |
+| `sto.py` | Standard Siberian Tiger Optimization (baseline) |
+| `utils.py` | Helper functions for data preprocessing and evaluation |
+| `datasets/` | Benchmark datasets (Liver, Cancer, Wine, Iris, Glass) |
+| `results/` | Contains CSV files of iteration-wise convergence results |
+| `plots/` | Includes all final figures used in the publication (Box plots, Convergence curves) |
 
-bash
-pip install -r requirements.txt
-Run CLFSTO clustering:
+---
 
-python
-from src.CLFSTO import CLFSTO_Clustering
-data = load_dataset("iris.csv")  
-best_centers, fitness = CLFSTO_Clustering(data, k=3, max_iter=100)
-📜 Citation
+## 🧩 Algorithm Overview
 
-bibtex
-@misc{CLFSTO2024,
-  author = {Hossain},
-  title = {Chaotic Levy Flight Siberian Tiger Optimization (CLFSTO) for Data Clustering},
-  year = {2025},
-  publisher = {},
-  journal = {},
-  howpublished = {\url{}}
+### CLFSTO Enhancements:
+1. **Chaotic Initialization:** Improves diversity of initial population.
+2. **Levy Flight Perturbation:** Prevents premature convergence.
+3. **Dynamic Parameter Adaptation:** Ensures better global–local search transition.
+
+### Flow:
+```
+Initialize population → Apply chaotic mapping → Evaluate fitness
+→ Update positions via Levy Flight strategy → Select best solutions
+→ Iterate until convergence → Output optimal cluster centers
+```
+
+---
+
+## 📊 Experimental Setup
+
+| Parameter | Value |
+|------------|--------|
+| Population Size | 50 |
+| Maximum Iterations | 500 |
+| Datasets | Liver, Cancer, Wine, Iris, Glass |
+| Comparison Algorithms | STO, CSTO, SSTO, PSO, GA, GWO, WOA, K-Means |
+| Evaluation Metrics | Accuracy, Fitness, Convergence, Execution Time |
+
+---
+
+## 📈 Results and Visualization
+
+### Figures
+- **Figure 2:** Example grayscale clustering results (600 DPI, TIF)
+- **Figure 3:** Box plots of the last 30 iterations (300 DPI, JPEG)
+- **Figure 4:** Convergence curves of all algorithms (300 DPI, JPEG)
+
+All figures are located in `/plots/` and correspond to the paper’s final accepted version.
+
+---
+
+## 🔍 Citation
+If you use this code in your research, please cite the following paper:
+
+```
+@article{yourlastname2025clfsto,
+  title={Chaotic Levy-Flight-Driven Siberian Tiger Optimization for Enhanced Data Clustering},
+  author={Your Name},
+  journal={Cybernetics & Systems},
+  year={2025},
+  publisher={Taylor & Francis}
 }
-🤝 Contributing
-Contributions are welcome! Open an Issue or submit a Pull Request for improvements.
+```
 
-📧 Contact
-For questions or collaborations, contact: alaminh1411@gmail.com
+---
 
-🔹 Optimized Clustering with Metaheuristics | Built with Python & NumPy 🔹
+## 📬 Contact
+For questions or collaborations, please contact:  
+📧 your.email@domain.com  
+🌐 [ResearchGate / ORCID / LinkedIn link if preferred]
+
+---
+
+## 📜 License
+This project is distributed under the **MIT License**.  
+See the [LICENSE](LICENSE) file for more details.
+
+---
