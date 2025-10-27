@@ -54,7 +54,7 @@ Initialize population → Apply chaotic mapping → Evaluate fitness
 | Comparison Algorithms | STO, CSTO, SSTO, PSO, GA, GWO, WOA, K-Means |
 
 
-## 🔍 Citation
+## Citation
 If you use this code in your research, please cite the following paper:
 
 ```
@@ -70,7 +70,7 @@ If you use this code in your research, please cite the following paper:
 }
 ```
 
-## 📬 Contact
+## Contact
 For questions or collaborations, please contact:  
 📧 alaminh1411@gmail.com  
 🌐 [ORCID:https://orcid.org/my-orcid?orcid=0000-0003-3382-5300]
